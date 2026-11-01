@@ -5,9 +5,10 @@
 </p>
 
 <p align="center">
-  <a href="https://upi-sentinel-frontend.onrender.com/"><strong>🚀 View Live Application</strong></a>
-  &nbsp; | &nbsp;
-  <a href="https://vigneshbabu4.github.io/LOGIC-LOOM/"><strong>📊 EDA & Visualization</strong></a>
+  🚀 View Live Application:-<a href="https://upi-sentinel-frontend.onrender.com/"><strong>https://upi-sentinel-frontend.onrender.com/</strong></a>
+  
+  <br>
+  📊 EDA & Visualization<a href="https://vigneshbabu4.github.io/LOGIC-LOOM/"><strong>https://vigneshbabu4.github.io/LOGIC-LOOM/</strong></a>
 </p>
 
 <p align="center">
@@ -69,7 +70,7 @@ Extra Trees is an ensemble-based supervised Machine Learning algorithm that comb
 
 Instead of depending on a single decision tree, the algorithm builds multiple trees using randomized feature selection and split thresholds. Their predictions are aggregated to determine the final class.
 
-### Why did we choose Extra Trees?
+### 🔴 Why did we choose Extra Trees?
 
 Fraud detection is a classification problem involving structured transaction data with a mixture of numerical and categorical features.
 
@@ -119,13 +120,13 @@ This helps the classifier pay more attention to fraudulent transactions rather t
 
 Extra Trees works effectively with numerical and encoded categorical features and can learn feature interactions without requiring extensive manual feature transformations.
 
-### Why not use Logistic Regression?
+### 🔴 Why not use Logistic Regression?
 
 Logistic Regression is a useful baseline classification algorithm, but it primarily learns a linear decision boundary in its transformed feature space.
 
 Fraud patterns may involve complex combinations of transaction attributes. Extra Trees can capture such non-linear interactions more naturally.
 
-### Why not use a single Decision Tree?
+### 🔴 Why not use a single Decision Tree?
 
 A single decision tree can easily become sensitive to training data variations.
 
