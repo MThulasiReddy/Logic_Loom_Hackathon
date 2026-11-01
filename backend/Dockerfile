@@ -12,14 +12,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy backend application code and models
-COPY . /app/backend/
-
-WORKDIR /app/backend
+# Copy entire backend directory into /app (this IS /app)
+COPY . .
 
 EXPOSE 8000
 
-ENV PYTHONPATH=/app/backend
+ENV PYTHONPATH=/app
 ENV PYTHONUNBUFFERED=1
 
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]

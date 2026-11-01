@@ -2,12 +2,13 @@
 __pycache__/
 *.py[cod]
 *$py.class
-*.env
 .env
 .venv
 env/
 venv/
 ENV/
+
+# Database files — keep out of git (DB auto-seeds on startup)
 *.db
 *.sqlite3
 
@@ -29,5 +30,9 @@ yarn-error.log*
 *.swp
 *.swo
 
-# Docker
-.dockerignore
+# Large data files
+*.csv
+*.ipynb
+
+# DO NOT ignore models/ — they must be in git for Docker build
+# backend/models/*.joblib  <-- intentionally NOT ignored

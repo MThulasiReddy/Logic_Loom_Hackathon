@@ -1,0 +1,31 @@
+services:
+  # ─── Backend: FastAPI + ML ─────────────────────────────────────────────────
+  - type: web
+    name: upi-sentinel-backend
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DATABASE_URL
+        value: sqlite:///./upi_sentinel.db
+      - key: PYTHONUNBUFFERED
+        value: "1"
+
+  # ─── Frontend: React/Vite → nginx ──────────────────────────────────────────
+  - type: web
+    name: upi-sentinel-frontend
+    runtime: docker
+    dockerfilePath: ./frontend/Dockerfile
+    dockerContext: ./frontend
+    plan: free
+    buildArgs:
+      # Updated automatically after backend is first deployed
+      - name: VITE_API_BASE_URL
+        value: https://upi-sentinel-backend.onrender.com
+    envVars:
+      - key: PORT
+        value: "80"
