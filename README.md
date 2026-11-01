@@ -1,4 +1,7 @@
 # UPI Sentinel – Intelligent Fraud Detection System
+
+View Live : https://upi-sentinel-frontend.onrender.com/
+EDA & Visualization : https://vigneshbabu4.github.io/LOGIC-LOOM/
 > **Real-Time AI-Powered Digital Payment Security**  
 > *Hackathon Track: KLU + Path-3 ML-02 – Real-Time UPI / Digital Payment Fraud Detection*
 
